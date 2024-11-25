@@ -1,0 +1,16 @@
+name: Self-Hosted Runner POC
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  self-hosted-job:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Print message to console
+        run: echo "Hello from self-hosted runner!"
