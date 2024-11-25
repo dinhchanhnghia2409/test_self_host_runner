@@ -1,4 +1,4 @@
-name: Run Local Script on Self-Hosted Runner
+name: Run Batch Script on Windows Self-hosted Runner
 
 on:
   push:
@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  test-local-script:
-    runs-on: self-hosted
+  run-batch-file:
+    runs-on: self-hosted # Ensure you are using a self-hosted Windows runner
+
     steps:
-      - name: Run a local Shell script
-        run: bash ./regression.sh
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Batch Script
+        run: ./regression.bat
