@@ -16,6 +16,6 @@ jobs:
       - name: Run Batch Script
         run: ./regression.bat
 
-      - name: Open new CMD window
+      - name: Open new CMD window and echo message
         run: |
-          start cmd /K "echo 'Open app for Regression is running!'"
+          powershell -Command "Start-Process cmd -ArgumentList '/K', 'echo Open app for Regression is running!'"
