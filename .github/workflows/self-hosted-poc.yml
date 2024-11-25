@@ -1,4 +1,4 @@
-name: Self-Hosted Runner POC
+name: Run Local Script on Self-Hosted Runner
 
 on:
   push:
@@ -6,11 +6,8 @@ on:
       - main
 
 jobs:
-  self-hosted-job:
+  test-local-script:
     runs-on: self-hosted
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Print message to console
-        run: echo "Hello from self-hosted runner!"
+      - name: Run a local Shell script
+        run: bash ./myscript.sh
