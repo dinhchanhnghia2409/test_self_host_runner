@@ -10,4 +10,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Run a local Shell script
-        run: bash ./myscript.sh
+        run: bash ./regression.sh
