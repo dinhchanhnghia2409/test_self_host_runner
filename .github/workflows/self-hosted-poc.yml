@@ -15,3 +15,7 @@ jobs:
 
       - name: Run Batch Script
         run: ./regression.bat
+
+      - name: Open new CMD window
+        run: |
+          start cmd /K "echo 'Open app for Regression is running!'"
